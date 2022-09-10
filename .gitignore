@@ -28,7 +28,7 @@ settings_data.json
 
 # Editors #
 ###########
-.idea
+#.idea
 *.iml
 .vscode
 *.sublime-workspace
