@@ -1,23 +1,23 @@
 const {src, dest} = require("gulp");
+const path = require("../config/path");
+
 
 const plumber = require('gulp-plumber');
 const fileInclude = require('gulp-file-include');
 const webpHtml = require('gulp-webp-html');
 const notify = require('gulp-notify');
 
+
+
 function html() {
-    return src([
-        './_src/pages/*.html',
-        '!./_src/pages/_head.html',
-        '!./_src/pages/_script.html',
-    ])
+    return src(path.html.src)
         .pipe(plumber(notify.onError({
             "title": "HTML",
             "message": "Error: <%= error.message %>"
         })))
         .pipe(fileInclude())
         .pipe(webpHtml())
-        .pipe(dest('./dist/pages'))
+        .pipe(dest(path.html.dist))
 }
 
 module.exports = html;

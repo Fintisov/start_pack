@@ -1,7 +1,8 @@
 const del = require('del');
+const path = require("../config/path");
 
 function clear () {
-    return del("./dist");
+    return del(path.root);
 }
 
 module.exports = clear;
