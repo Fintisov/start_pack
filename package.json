@@ -1,5 +1,22 @@
 {
+  "name": "start-pack-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "browser-sync": "^2.27.10",
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-webp-html": "^1.0.2"
+  },
+  "dependencies": {
+
   }
 }
