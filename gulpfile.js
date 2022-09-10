@@ -1,34 +1,15 @@
-const {src, dest, watch, series, parallel} = require("gulp");
-
-// other
-const plumber = require('gulp-plumber');
-const notify = require('gulp-notify');
+const {watch, series, parallel} = require("gulp");
 const browserSync = require('browser-sync').create();
 
-//html
-const fileInclude = require('gulp-file-include');
-const webpHtml = require('gulp-webp-html');
+// tasks
+const html = require("./task/html")
+const clear = require("./task/clear")
 
-function html() {
-    return src([
-        '!_src/pages/_head.html',
-        '!_src/pages/_scripts.html',
-        '_src/pages/*.html',
-    ])
-        .pipe(plumber(notify.onError({
-            "title": "HTML",
-            "message": "Error: <%= error.message %>"
-        })))
-        .pipe(fileInclude())
-        .pipe(webpHtml())
-        .pipe(dest('./dist/pages'))
-        .pipe(browserSync.stream())
-}
 
 function server() {
     browserSync.init({
         server: {
-            baseDir: ['./dist'],
+            baseDir: ["./dist/pages", './dist'],
             directory: true,
         },
         port: 3000,
@@ -36,21 +17,19 @@ function server() {
     });
 }
 
-// Наблюдение
 function watcher() {
-    watch(['_src/pages/**/*.html'], html);
+    watch(['_src/pages/**/*.html'], html).on("all", browserSync.reload);
 }
 
-// Задачи
-exports.html = html;
 
+exports.html = html;
+exports.clear = clear;
 exports.watcher = watcher;
 exports.server = server;
 
-
 exports.build = series(
+    clear,
     html,
     parallel(watcher, server)
 );
 
-exports.default = parallel();
