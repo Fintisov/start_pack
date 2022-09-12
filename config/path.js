@@ -4,10 +4,6 @@ const pathDist = "./dist"
 const path = {
     root: pathDist,
 
-    server: {
-        baseDir: [`${pathDist}/pages`, pathDist],
-    },
-
     html: {
         src: [`${pathSrc}/pages/*.html`,
             `!${pathSrc}/pages/_head.html`,
@@ -25,15 +21,23 @@ const path = {
 
     script: {
         src: `${pathSrc}/scripts/script.js`,
-        watch: [
-            `${pathSrc}/scripts/**/*.js`,
-            `!${pathSrc}/scripts/script.min.js`
-        ],
+        watch: `${pathSrc}/scripts/**/*.js`,
         dist: `${pathDist}/scripts`,
+    },
+
+    image : {
+        src: `${pathSrc}/images/**/*.{jpg,png,svg,gif,ico,webp}`,
+        watch: `${pathSrc}/images/**/*.{jpg,png,svg,gif,ico,webp}`,
+        distSrc: `${pathSrc}/images`,
+        dist: `${pathDist}/images`,
     },
 
     webpack: {
         entry: `${pathSrc}/scripts/script.js`
+    },
+
+    server: {
+        baseDir: [`${pathDist}/pages`, pathDist],
     }
 }
 

@@ -3,9 +3,9 @@ const path = require("../config/path");
 
 
 const plumber = require('gulp-plumber');
+const notify = require('gulp-notify');
 const fileInclude = require('gulp-file-include');
 const webpHtml = require('gulp-webp-html');
-const notify = require('gulp-notify');
 
 
 

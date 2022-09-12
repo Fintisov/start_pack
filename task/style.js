@@ -11,7 +11,6 @@ const groupMedia = require('gulp-group-css-media-queries');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCss = require('gulp-clean-css');
 const rename = require('gulp-rename');
-const cssImport = require('gulp-cssimport');
 
 function style() {
     return src(path.style.src, {sourcemaps: true})
