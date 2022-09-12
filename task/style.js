@@ -9,8 +9,9 @@ const shorthand = require('gulp-shorthand');
 const webpCss = require('gulp-webp-css');
 const groupMedia = require('gulp-group-css-media-queries');
 const autoprefixer = require('gulp-autoprefixer');
-const clean_css = require('gulp-clean-css');
+const cleanCss = require('gulp-clean-css');
 const rename = require('gulp-rename');
+const cssImport = require('gulp-cssimport');
 
 function style() {
     return src(path.style.src, {sourcemaps: true})
@@ -29,14 +30,14 @@ function style() {
         }))
         .pipe(size({title: "style.css"}))
         .pipe(dest('_src/styles'))
-        .pipe(dest('dist/styles'))
-        .pipe(clean_css())
+        .pipe(dest(path.style.dist))
+        .pipe(cleanCss())
         .pipe(rename({
             extname: '.min.css'
         }))
         .pipe(size({title: "style.min.css"}))
         .pipe(dest('_src/styles'))
-        .pipe(dest('dist/styles'), {sourcemaps: true})
+        .pipe(dest(path.style.dist, {sourcemaps: true}))
 }
 
 module.exports = style;

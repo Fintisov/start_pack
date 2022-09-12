@@ -1,8 +1,12 @@
 const pathSrc = "./_src";
 const pathDist = "./dist"
 
-module.exports = {
+const path = {
     root: pathDist,
+
+    server: {
+        baseDir: [`${pathDist}/pages`, pathDist],
+    },
 
     html: {
         src: [`${pathSrc}/pages/*.html`,
@@ -13,13 +17,24 @@ module.exports = {
         dist: `${pathDist}/pages`
     },
 
-    server: {
-        baseDir: [`${pathDist}/pages`, pathDist],
-    },
-
     style: {
         src: `${pathSrc}/styles/style.{scss,sass}`,
         watch: `${pathSrc}/styles/**/*.{sass,scss}`,
         dist: `${pathDist}/styles`,
+    },
+
+    script: {
+        src: `${pathSrc}/scripts/script.js`,
+        watch: [
+            `${pathSrc}/scripts/**/*.js`,
+            `!${pathSrc}/scripts/script.min.js`
+        ],
+        dist: `${pathDist}/scripts`,
+    },
+
+    webpack: {
+        entry: `${pathSrc}/scripts/script.js`
     }
 }
+
+module.exports = path;
