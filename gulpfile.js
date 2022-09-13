@@ -12,6 +12,7 @@ const clear = require("./task/clear");
 const style = require("./task/style");
 const script = require("./task/script");
 const image = require("./task/image");
+const asset = require("./task/asset");
 
 function server() {
     browserSync.init({
@@ -29,6 +30,7 @@ function watcher() {
     watch(path.style.watch, style).on("all", browserSync.reload);
     watch(path.script.watch, script).on("all", browserSync.reload);
     watch(path.image.watch, image).on("all", browserSync.reload);
+    watch(path.asset.watch, asset).on("all", browserSync.reload);
 }
 
 // задачи
@@ -36,13 +38,14 @@ exports.html = html;
 exports.style = style;
 exports.script = script;
 exports.image = image;
+exports.asset = asset;
 exports.clear = clear;
 exports.watcher = watcher;
 exports.server = server;
 
 exports.build = series(
     clear,
-    parallel(html, style, script, image),
+    parallel(html, style, script, image, asset),
     parallel(watcher, server),
 );
 

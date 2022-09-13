@@ -25,11 +25,18 @@ const path = {
         dist: `${pathDist}/scripts`,
     },
 
-    image : {
+    image: {
         src: `${pathSrc}/images/**/*.{jpg,png,svg,gif,ico,webp}`,
         watch: `${pathSrc}/images/**/*.{jpg,png,svg,gif,ico,webp}`,
         distSrc: `${pathSrc}/images`,
         dist: `${pathDist}/images`,
+    },
+
+    asset: {
+        src: `${pathSrc}/assets/**/*`,
+        watch: `${pathSrc}/assets/**/*`,
+        distSrc: `${pathSrc}/assets`,
+        dist: `${pathDist}/assets`,
     },
 
     webpack: {
