@@ -1,5 +1,6 @@
 const {src, dest} = require("gulp");
 const path = require("../config/path");
+const app = require("../config/app");
 
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
@@ -8,10 +9,7 @@ const webpHtml = require('gulp-webp-html');
 
 function html() {
     return src(path.html.src)
-        .pipe(plumber(notify.onError({
-            "title": "HTML",
-            "message": "Error: <%= error.message %>"
-        })))
+        .pipe(plumber(notify.onError(app.html.plumber)))
         .pipe(fileInclude())
         .pipe(webpHtml())
         .pipe(dest(path.html.dist))

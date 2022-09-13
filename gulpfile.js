@@ -2,6 +2,7 @@ const {watch, series, parallel} = require("gulp");
 
 //конфигурация
 const path = require("./config/path");
+const app = require("./config/app");
 
 //плагины
 const browserSync = require('browser-sync').create();
@@ -16,14 +17,7 @@ const font = require("./task/font");
 const asset = require("./task/asset");
 
 function server() {
-    browserSync.init({
-        server: {
-            baseDir: path.server.baseDir,
-            directory: true,
-        },
-        port: 3000,
-        notify: false
-    });
+    browserSync.init(app.server.browserSync);
 }
 
 function watcher() {
@@ -46,9 +40,13 @@ exports.clear = clear;
 exports.watcher = watcher;
 exports.server = server;
 
-exports.build = series(
+exports.default = series(
     clear,
     parallel(html, style, script, image, font, asset),
     parallel(watcher, server),
 );
 
+exports.build = series(
+    clear,
+    parallel(html, style, script, image, font, asset),
+);

@@ -1,5 +1,6 @@
 const {src, dest} = require("gulp");
 const path = require("../config/path");
+const app = require("../config/app");
 
 const plumber = require("gulp-plumber");
 const notify = require("gulp-notify");
@@ -9,22 +10,13 @@ const imageMin = require("gulp-imagemin");
 
 function asset() {
     return src(`${path.asset.src}.{jpg,png,svg,gif,ico,webp}`)
-        .pipe(plumber(notify.onError({
-            "title": "Asset",
-            "message": "Error: <%= error.message %>"
-        })))
+        .pipe(plumber(notify.onError(app.asset.plumber)))
         .pipe(newer(path.asset.dist))
-        .pipe(webp({quality: 70}))
+        .pipe(webp(app.asset.webp))
         .pipe(dest(path.asset.destSrc))
         .pipe(src(`${path.asset.src}.{jpg,png,svg,gif,ico,webp}`))
         .pipe(newer(path.asset.dist))
-        .pipe(imageMin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            interlaced: true,
-            verbose: true,
-            optimizationLevel: 4 // 0 to 7
-        }))
+        .pipe(imageMin(app.asset.imageMin))
         .pipe(dest(path.asset.destSrc))
         .pipe(src(path.asset.src))
         .pipe(dest(path.asset.dist))

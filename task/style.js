@@ -1,5 +1,6 @@
 const {src, dest} = require("gulp");
 const path = require("../config/path");
+const app = require("../config/app");
 
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
@@ -18,7 +19,7 @@ function style() {
             "title": "SCSS",
             "message": "Error: <%= error.message %>"
         })))
-        .pipe(sass({outputStyle: 'expanded'}))
+        .pipe(sass(app.style.sass))
         .pipe(shorthand())
         .pipe(webpCss())
         .pipe(groupMedia())
@@ -31,9 +32,7 @@ function style() {
         .pipe(dest(path.style.destSrc))
         .pipe(dest(path.style.dist))
         .pipe(cleanCss())
-        .pipe(rename({
-            extname: '.min.css'
-        }))
+        .pipe(rename({extname: '.min.css'}))
         .pipe(size({title: "style.min.css"}))
         .pipe(dest(path.style.destSrc))
         .pipe(dest(path.style.dist, {sourcemaps: true}))
