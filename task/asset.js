@@ -15,7 +15,7 @@ function asset() {
         })))
         .pipe(newer(path.asset.dist))
         .pipe(webp({quality: 70}))
-        .pipe(dest(path.asset.distSrc))
+        .pipe(dest(path.asset.destSrc))
         .pipe(src(`${path.asset.src}.{jpg,png,svg,gif,ico,webp}`))
         .pipe(newer(path.asset.dist))
         .pipe(imageMin({
@@ -25,7 +25,7 @@ function asset() {
             verbose: true,
             optimizationLevel: 4 // 0 to 7
         }))
-        .pipe(dest(path.asset.distSrc))
+        .pipe(dest(path.asset.destSrc))
         .pipe(src(path.asset.src))
         .pipe(dest(path.asset.dist))
 }

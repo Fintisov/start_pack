@@ -28,14 +28,14 @@ function style() {
             cascade: true,
         }))
         .pipe(size({title: "style.css"}))
-        .pipe(dest('_src/styles'))
+        .pipe(dest(path.style.destSrc))
         .pipe(dest(path.style.dist))
         .pipe(cleanCss())
         .pipe(rename({
             extname: '.min.css'
         }))
         .pipe(size({title: "style.min.css"}))
-        .pipe(dest('_src/styles'))
+        .pipe(dest(path.style.destSrc))
         .pipe(dest(path.style.dist, {sourcemaps: true}))
 }
 

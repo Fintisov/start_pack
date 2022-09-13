@@ -16,6 +16,7 @@ const path = {
     style: {
         src: `${pathSrc}/styles/style.{scss,sass}`,
         watch: `${pathSrc}/styles/**/*.{sass,scss}`,
+        destSrc: `${pathSrc}/styles`,
         dist: `${pathDist}/styles`,
     },
 
@@ -28,14 +29,14 @@ const path = {
     image: {
         src: `${pathSrc}/images/**/*.{jpg,png,svg,gif,ico,webp}`,
         watch: `${pathSrc}/images/**/*.{jpg,png,svg,gif,ico,webp}`,
-        distSrc: `${pathSrc}/images`,
+        destSrc: `${pathSrc}/images`,
         dist: `${pathDist}/images`,
     },
 
     asset: {
         src: `${pathSrc}/assets/**/*`,
         watch: `${pathSrc}/assets/**/*`,
-        distSrc: `${pathSrc}/assets`,
+        destSrc: `${pathSrc}/assets`,
         dist: `${pathDist}/assets`,
     },
 

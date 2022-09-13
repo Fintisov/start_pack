@@ -15,7 +15,7 @@ function images() {
         })))
         .pipe(newer(path.image.dist))
         .pipe(webp({quality: 70}))
-        .pipe(dest(path.image.distSrc))
+        .pipe(dest(path.image.destSrc))
         .pipe(dest(path.image.dist))
         .pipe(src(path.image.src))
         .pipe(newer(path.image.dist))
@@ -26,7 +26,7 @@ function images() {
             verbose: true,
             optimizationLevel: 4 // 0 to 7
         }))
-        .pipe(dest(path.image.distSrc))
+        .pipe(dest(path.image.destSrc))
         .pipe(dest(path.image.dist))
 }
 
