@@ -12,22 +12,16 @@ const groupMedia = require('gulp-group-css-media-queries');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCss = require('gulp-clean-css');
 const rename = require('gulp-rename');
+const gulpIf = require("gulp-if");
 
 function style() {
-    return src(path.style.src, {sourcemaps: true})
-        .pipe(plumber(notify.onError({
-            "title": "SCSS",
-            "message": "Error: <%= error.message %>"
-        })))
+    return src(path.style.src, {sourcemaps: app.isDev})
+        .pipe(plumber(notify.onError(app.style.plumber)))
         .pipe(sass(app.style.sass))
         .pipe(shorthand())
         .pipe(webpCss())
-        .pipe(groupMedia())
-        .pipe(autoprefixer({
-            overrideBrowserslist: ['last 10 version'],
-            grid: true,
-            cascade: true,
-        }))
+        .pipe(gulpIf(app.isProd, groupMedia()))
+        .pipe(autoprefixer(app.style.autoprefixer))
         .pipe(size({title: "style.css"}))
         .pipe(dest(path.style.destSrc))
         .pipe(dest(path.style.dist))
@@ -35,7 +29,7 @@ function style() {
         .pipe(rename({extname: '.min.css'}))
         .pipe(size({title: "style.min.css"}))
         .pipe(dest(path.style.destSrc))
-        .pipe(dest(path.style.dist, {sourcemaps: true}))
+        .pipe(dest(path.style.dist, {sourcemaps: app.isDev}))
 }
 
 module.exports = style;

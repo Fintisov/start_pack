@@ -1,6 +1,12 @@
+const isProd = process.argv.includes("--production");
+const isDev = !isProd;
+
 const path = require("./path");
 
 const app = {
+    isProd: isProd,
+    isDev: isDev,
+
     html: {
         plumber: {
             "title": "HTML",
@@ -9,7 +15,18 @@ const app = {
     },
 
     style: {
+        plumber: {
+            "title": "SCSS",
+            "message": "Error: <%= error.message %>"
+        },
+
         sass: {outputStyle: 'expanded'},
+
+        autoprefixer: {
+            overrideBrowserslist: ['last 10 version'],
+            grid: true,
+            cascade: true,
+        },
     },
 
     script: {
@@ -19,7 +36,7 @@ const app = {
         },
 
         webpack: {
-            mode: "production",
+            mode: isProd ? "production" : "development",
             entry: "./_src/scripts/script.js",
             output: {
                 filename: 'script.js'

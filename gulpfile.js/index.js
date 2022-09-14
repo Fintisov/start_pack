@@ -40,13 +40,16 @@ exports.clear = clear;
 exports.watcher = watcher;
 exports.server = server;
 
-exports.default = series(
+const production = series(
+    clear,
+    parallel(html, style, script, image, font, asset),
+);
+
+const developer = series(
     clear,
     parallel(html, style, script, image, font, asset),
     parallel(watcher, server),
-);
+)
 
-exports.build = series(
-    clear,
-    parallel(html, style, script, image, font, asset),
-);
+
+exports.default = app.isProd ? production : developer;

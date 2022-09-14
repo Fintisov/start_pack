@@ -7,6 +7,7 @@ const notify = require("gulp-notify");
 const newer = require("gulp-newer");
 const webp = require("gulp-webp");
 const imageMin = require("gulp-imagemin");
+const gulpIf = require("gulp-if");
 
 function asset() {
     return src(`${path.asset.src}.{jpg,png,svg,gif,ico,webp}`)
@@ -16,7 +17,7 @@ function asset() {
         .pipe(dest(path.asset.destSrc))
         .pipe(src(`${path.asset.src}.{jpg,png,svg,gif,ico,webp}`))
         .pipe(newer(path.asset.dist))
-        .pipe(imageMin(app.asset.imageMin))
+        .pipe(gulpIf(app.isProd, imageMin(app.asset.imageMin)))
         .pipe(dest(path.asset.destSrc))
         .pipe(src(path.asset.src))
         .pipe(dest(path.asset.dist))

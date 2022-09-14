@@ -39,11 +39,13 @@ const path = {
         destSrc: `${pathSrc}/assets`,
         dist: `${pathDist}/assets`,
     },
+
     font: {
         src: `${pathSrc}/fonts/**/*`,
         watch: `${pathSrc}/fonts/**/*`,
         dist: `${pathDist}/fonts`,
     },
+
     webpack: {
         entry: `${pathSrc}/scripts/script.js`
     },
