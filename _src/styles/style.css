@@ -382,12 +382,6 @@ a:hover {
   color: black;
   text-decoration: none;
 }
-
-body {
-  background: #000000;
-  color: purple;
-}
-
-@supports (-webkit-appearance:none) {
+@supports (-webkit-appearance:none){
 
 }

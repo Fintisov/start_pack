@@ -43,6 +43,7 @@ exports.server = server;
 const production = series(
     clear,
     parallel(html, style, script, image, font, asset),
+    parallel(watcher, server),
 );
 
 const developer = series(
