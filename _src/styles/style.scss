@@ -1,12 +1,19 @@
+@use "sass:math";
 //******************** LIBS ********************
-@import "libs/normalize";
 
 //******************** GLOBAL ********************
 @import "global/variables";
-@import "global/default-style";
-@import "global/mixins";
-@import "global/helper-classes";
 @import "global/fonts";
 
+//******************** MIXINS ********************
+@import "_mixins/media";
+@import "_mixins/reset";
+@import "_mixins/general";
+
+//******************** OTHER ********************
+@import "global/default-style";
+@import "global/helper-classes";
+@import "global/typography";
+
 //******************** BLOCKS ********************
-@import "_index";
+@import "block/header";
