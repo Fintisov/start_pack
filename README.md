@@ -26,3 +26,5 @@
 **npm uninstall "name" "name" "name" --save-dev** - removing multiple plugins
 
 **"name" --v** - version check
+
+**git subtree push --prefix dist origin gh-pages** - added dist folder for present
