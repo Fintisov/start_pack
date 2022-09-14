@@ -10,7 +10,7 @@ const path = {
             `!${pathSrc}/pages/_script.html`
         ],
         watch: `${pathSrc}/pages/**/*.html`,
-        dist: `${pathDist}/pages`
+        dist: `${pathDist}`
     },
 
     style: {
