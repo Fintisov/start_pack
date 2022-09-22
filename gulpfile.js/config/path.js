@@ -24,9 +24,15 @@ const path = {
     },
 
     image: {
-        src: `${pathSrc}/images/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
-        watch: `${pathSrc}/images/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
+        src: `${pathSrc}/images/**/*.{jpg,jpeg,png,gif,ico,webp}`,
+        watch: `${pathSrc}/images/**/*.{jpg,jpeg,png,gif,ico,webp}`,
         destSrc: `${pathSrc}/images`,
+        dist: `${pathDist}/images`,
+    },
+
+    sprite: {
+        src: `${pathSrc}/images/**/*.svg`,
+        watch: `${pathSrc}/images/**/*.svg`,
         dist: `${pathDist}/images`,
     },
 

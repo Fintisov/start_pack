@@ -18,7 +18,7 @@ function images() {
         .pipe(dest(path.image.dist))
         .pipe(src(path.image.src))
         .pipe(newer(path.image.dist))
-        .pipe(gulpIf(app.isProd, imageMin(app.image.imageMin)))
+        .pipe(imageMin(app.image.imageMin))
         .pipe(dest(path.image.destSrc))
         .pipe(dest(path.image.dist))
 }

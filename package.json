@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp",
+    "clear": "gulp clear",
     "build": "gulp --production"
   },
   "author": "",

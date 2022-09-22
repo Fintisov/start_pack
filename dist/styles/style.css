@@ -37,10 +37,8 @@ dd {
   margin: 0;
 }
 
-/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-
-ul[class],
-ol[class] {
+ul,
+ol {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -62,12 +60,9 @@ a {
 
 img {
   max-width: 100%;
+  max-height: 100%;
+  height: auto;
   display: block;
-}
-
-.body-wrapper {
-  width: 1920px;
-  margin: 0 auto;
 }
 
 .container {
@@ -94,15 +89,23 @@ img {
   border: 0;
 }
 
+.display-none {
+  display: none;
+}
+
+.icon {
+  stroke: currentColor;
+  width: 24px;
+  height: 24px;
+}
+
 p.underline {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   text-underline-offset: 4px;
 }
 
 p.strikethrough {
-  -webkit-text-decoration-line: line-through;
-          text-decoration-line: line-through;
+  text-decoration-line: line-through;
 }
 
 p.caps {
@@ -145,66 +148,38 @@ p.caps {
   font-weight: 900;
 }
 
-@supports (-webkit-appearance:none) {
-
-}
-
 @media screen and (max-width: 1400px) {
   .container {
     max-width: 1140px;
   }
-
-@supports (-webkit-appearance:none) {
-
-}
 }
 
 @media screen and (max-width: 1200px) {
   .container {
     max-width: 960px;
   }
-
-@supports (-webkit-appearance:none) {
-
-}
 }
 
 @media screen and (max-width: 992px) {
   .container {
     max-width: 720px;
   }
-
-@supports (-webkit-appearance:none) {
-
-}
 }
 
 @media screen and (max-width: 768px) {
   .container {
     max-width: 540px;
   }
-
-@supports (-webkit-appearance:none) {
-
-}
 }
 
 @media screen and (max-width: 576px) {
   .container {
     max-width: 100%;
   }
-
-@supports (-webkit-appearance:none) {
-
-}
 }
 
 @media screen and (max-width: 575px) {
   .container-fluid {
     padding: 0 20px;
   }
-
-@supports (-webkit-appearance:none) {
-
-}
 }

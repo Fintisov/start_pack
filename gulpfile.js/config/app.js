@@ -90,17 +90,7 @@ const app = {
         plumber: {
             "title": "Asset",
             "message": "Error: <%= error.message %>"
-        },
-
-        webp: {quality: 70},
-
-        imageMin: {
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            interlaced: true,
-            verbose: true,
-            optimizationLevel: 4 // 0 to 7
-        },
+        }
     },
 
     server: {

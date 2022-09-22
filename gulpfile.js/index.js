@@ -13,6 +13,7 @@ const clear = require("./task/clear");
 const style = require("./task/style");
 const script = require("./task/script");
 const image = require("./task/image");
+const sprite = require("./task/sprite");
 const font = require("./task/font");
 const asset = require("./task/asset");
 
@@ -25,6 +26,7 @@ function watcher() {
     watch(path.style.watch, style).on("all", browserSync.reload);
     watch(path.script.watch, script).on("all", browserSync.reload);
     watch(path.image.watch, image).on("all", browserSync.reload);
+    watch(path.sprite.watch, sprite).on("all", browserSync.reload);
     watch(path.font.watch, font).on("all", browserSync.reload);
     watch(path.asset.watch, asset).on("all", browserSync.reload);
 }
@@ -34,6 +36,7 @@ exports.html = html;
 exports.style = style;
 exports.script = script;
 exports.image = image;
+exports.sprite = sprite;
 exports.font = font;
 exports.asset = asset;
 exports.clear = clear;
@@ -42,13 +45,12 @@ exports.server = server;
 
 const production = series(
     clear,
-    parallel(html, style, script, image, font, asset),
+    parallel(html, style, script, image, sprite, font, asset),
     parallel(watcher, server),
 );
 
 const developer = series(
-    clear,
-    parallel(html, style, script, image, font, asset),
+    parallel(html, style, script, image, sprite, font, asset),
     parallel(watcher, server),
 )
 
