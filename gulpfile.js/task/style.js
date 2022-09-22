@@ -7,7 +7,6 @@ const notify = require('gulp-notify');
 const sass = require('gulp-sass')(require('sass'));
 const size = require('gulp-size');
 const shorthand = require('gulp-shorthand');
-const webpCss = require('gulp-webp-css');
 const groupMedia = require('gulp-group-css-media-queries');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCss = require('gulp-clean-css');
@@ -18,8 +17,7 @@ function style() {
     return src(path.style.src, {sourcemaps: app.isDev})
         .pipe(plumber(notify.onError(app.style.plumber)))
         .pipe(sass(app.style.sass))
-        .pipe(shorthand())
-        .pipe(webpCss())
+        .pipe(gulpIf(app.isProd, shorthand()))
         .pipe(gulpIf(app.isProd, groupMedia()))
         .pipe(autoprefixer(app.style.autoprefixer))
         .pipe(size({title: "style.css"}))

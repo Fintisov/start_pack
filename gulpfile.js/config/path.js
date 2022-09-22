@@ -5,10 +5,7 @@ const path = {
     root: pathDist,
 
     html: {
-        src: [`${pathSrc}/pages/*.html`,
-            `!${pathSrc}/pages/_head.html`,
-            `!${pathSrc}/pages/_script.html`
-        ],
+        src: [`${pathSrc}/pages/*.html`],
         watch: `${pathSrc}/pages/**/*.html`,
         dist: `${pathDist}`
     },
@@ -27,8 +24,8 @@ const path = {
     },
 
     image: {
-        src: `${pathSrc}/images/**/*.{jpg,png,svg,gif,ico,webp}`,
-        watch: `${pathSrc}/images/**/*.{jpg,png,svg,gif,ico,webp}`,
+        src: `${pathSrc}/images/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
+        watch: `${pathSrc}/images/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
         destSrc: `${pathSrc}/images`,
         dist: `${pathDist}/images`,
     },
@@ -36,7 +33,6 @@ const path = {
     asset: {
         src: `${pathSrc}/assets/**/*`,
         watch: `${pathSrc}/assets/**/*`,
-        destSrc: `${pathSrc}/assets`,
         dist: `${pathDist}/assets`,
     },
 
@@ -52,7 +48,8 @@ const path = {
 
     server: {
         baseDir: [`${pathDist}/pages`, pathDist],
-    }
+    },
+
 }
 
 module.exports = path;
