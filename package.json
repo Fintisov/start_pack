@@ -5,7 +5,8 @@
   "scripts": {
     "start": "gulp",
     "clear": "gulp clear",
-    "build": "gulp --production"
+    "build": "gulp --production",
+    "gh-pages": "git subtree push --prefix dist origin gh-pages"
   },
   "author": "",
   "license": "ISC",
