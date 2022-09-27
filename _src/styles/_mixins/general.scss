@@ -1,11 +1,3 @@
-@use "sass:math";
-
-// вычисление lh и задавание fz
-@mixin font($font-size, $line-height) {
-  font-size: $font-size;
-  line-height: math.div($line-height, $font-size);
-}
-
 // Отображение количества строк
 @mixin line-text-hidden($col: 2) {
   display: -webkit-box;

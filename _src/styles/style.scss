@@ -1,14 +1,15 @@
 @use "sass:math";
 //******************** LIBS ********************
 
-//******************** GLOBAL ********************
-@import "global/variables";
-@import "global/fonts";
-
 //******************** MIXINS ********************
+@import "_mixins/font";
 @import "_mixins/media";
 @import "_mixins/reset";
 @import "_mixins/general";
+
+//******************** GLOBAL ********************
+@import "global/variables";
+@import "global/fonts";
 
 //******************** OTHER ********************
 @import "global/default-style";
