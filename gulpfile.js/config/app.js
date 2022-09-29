@@ -62,6 +62,13 @@ const app = {
         }
     },
 
+    vendorScript: {
+        plumber: {
+            "title": "vendorScript",
+            "message": "Error: <%= error.message %>"
+        }
+    },
+
     image: {
         plumber: {
             "title": "Image",

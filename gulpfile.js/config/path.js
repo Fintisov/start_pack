@@ -43,6 +43,12 @@ const path = {
         dist: `${pathDist}/assets`,
     },
 
+    vendorScript: {
+        src: `${pathSrc}/scripts/vendors/**/*.js`,
+        watch: `${pathSrc}/scripts/vendors/**/*.js`,
+        dist: `${pathDist}/scripts/vendors`,
+    },
+
     font: {
         src: `${pathSrc}/fonts/**/*`,
         watch: `${pathSrc}/fonts/**/*`,
