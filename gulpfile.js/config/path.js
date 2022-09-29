@@ -11,7 +11,8 @@ const path = {
     },
 
     style: {
-        src: `${pathSrc}/styles/style.{scss,sass}`,
+        src: [`${pathSrc}/styles/style.{scss,sass}`,
+            `${pathSrc}/styles/vendors.{scss,sass}`],
         watch: `${pathSrc}/styles/**/*.{sass,scss}`,
         destSrc: `${pathSrc}/styles`,
         dist: `${pathDist}/styles`,
