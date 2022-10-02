@@ -5,16 +5,16 @@
 }
 
 html {
-  font-size: 10px;
+  //font-size: 10px;
 }
 
 /* Выставляем основные настройки по-умолчанию для body */
 body {
   padding: 0;
   margin: 0;
-  min-height: 100vh;
+  min-height: calc(100vh + 1px);
   scroll-behavior: smooth;
-  line-height: 1.5;
+  line-height: 1.25;
 }
 
 /* Убираем внешние отступы */
@@ -33,9 +33,12 @@ dd {
 }
 
 ul, ol {
-  list-style: none;
   margin: 0;
-  padding: 0;
+
+  &.list-unstyled {
+    list-style: none;
+    padding: 0;
+  }
 }
 
 input,
@@ -45,9 +48,15 @@ select {
   font: inherit;
 }
 
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
-  bottom: 0;
   color: inherit;
   font-family: inherit;
 }
@@ -58,6 +67,7 @@ img {
 }
 
 //=============================
+
 .container {
   max-width: 1320px;
   width: 100%;
@@ -107,7 +117,7 @@ img {
 }
 
 .display-none {
-  display: none;
+  display: none !important;
 }
 
 .icon {
@@ -115,4 +125,3 @@ img {
   width: 24px;
   height: 24px;
 }
-

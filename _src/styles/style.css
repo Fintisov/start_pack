@@ -7,18 +7,14 @@
           box-sizing: border-box;
 }
 
-html {
-  font-size: 10px;
-}
-
 /* Выставляем основные настройки по-умолчанию для body */
 
 body {
   padding: 0;
   margin: 0;
-  min-height: 100vh;
+  min-height: calc(100vh + 1px);
   scroll-behavior: smooth;
-  line-height: 1.5;
+  line-height: 1.25;
 }
 
 /* Убираем внешние отступы */
@@ -39,8 +35,12 @@ dd {
 
 ul,
 ol {
-  list-style: none;
   margin: 0;
+}
+
+ul.list-unstyled,
+ol.list-unstyled {
+  list-style: none;
   padding: 0;
 }
 
@@ -51,9 +51,15 @@ select {
   font: inherit;
 }
 
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
-  bottom: 0;
   color: inherit;
   font-family: inherit;
 }
@@ -88,7 +94,7 @@ img {
 }
 
 .display-none {
-  display: none;
+  display: none !important;
 }
 
 .icon {
@@ -97,16 +103,23 @@ img {
   height: 24px;
 }
 
-p.underline {
+strong,
+.strong {
+  font-weight: bold;
+}
+
+del,
+.del {
+  text-decoration-line: line-through;
+}
+
+u,
+.text-underline {
   text-decoration-line: underline;
   text-underline-offset: 4px;
 }
 
-p.strikethrough {
-  text-decoration-line: line-through;
-}
-
-p.caps {
+.caps {
   text-transform: uppercase;
 }
 
