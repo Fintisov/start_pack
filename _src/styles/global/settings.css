@@ -1,0 +1,18 @@
+/* Error: Undefined mixin.
+ *    ,
+ * 77 | /   @include max-screen(1400px) {
+ * 78 | |     max-width: 1140px;
+ * 79 | \   }
+ *    '
+ *   settings.scss 77:3  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 77 \2502  \250c    @include max-screen(1400px) {\a 78 \2502  \2502      max-width: 1140px;\a 79 \2502  \2514    }\a    \2575 \a   settings.scss 77:3  root stylesheet";
+}
