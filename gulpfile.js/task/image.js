@@ -7,7 +7,6 @@ const notify = require("gulp-notify");
 const newer = require("gulp-newer");
 const webp = require("gulp-webp");
 const imageMin = require("gulp-imagemin");
-const gulpIf = require("gulp-if");
 
 function images() {
     return src(path.image.src)

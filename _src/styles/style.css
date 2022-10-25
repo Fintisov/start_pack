@@ -104,12 +104,12 @@ img {
 }
 
 strong,
-.strong {
+b .strong {
   font-weight: bold;
 }
 
 del,
-.del {
+s .del {
   text-decoration-line: line-through;
 }
 
