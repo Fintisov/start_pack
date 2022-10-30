@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 *,
 *::before,
 *::after {
@@ -10,20 +9,16 @@
 }
 
 /* Выставляем основные настройки по-умолчанию для body */
-
 body {
   min-height: calc(100vh + 1px);
   scroll-behavior: smooth;
   line-height: 1.25;
 }
 
-ul,
-ol {
+ul, ol {
   margin: 0;
 }
-
-ul.list-unstyled,
-ol.list-unstyled {
+ul.list-unstyled, ol.list-unstyled {
   list-style: none;
   padding: 0;
 }
@@ -48,17 +43,8 @@ a {
   font-family: inherit;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
@@ -72,17 +58,68 @@ img {
   display: block;
 }
 
+.settings-project-page section {
+  padding: 20px 0;
+}
+.settings-project-page .title {
+  font-size: 32px;
+}
+.settings-project-page hr {
+  margin: 15px 0;
+}
+.settings-project-page .code {
+  font-family: "Lucida Console", sans-serif;
+  font-size: 12px;
+  padding: 15px;
+  background-color: rgba(192, 192, 192, 0.5);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border: 2px solid #31ba31;
+  margin-bottom: 15px;
+}
+
 .container {
   max-width: 1320px;
   width: 100%;
   margin: 0 auto;
   padding: 0 10px;
 }
+@media screen and (max-width: 1400px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
+}
 
 .container-fluid {
   width: 100%;
   margin: 0 auto;
   padding: 0 10px;
+}
+@media screen and (max-width: 575px) {
+  .container-fluid {
+    padding: 0 20px;
+  }
 }
 
 .visibility-hidden {
@@ -106,18 +143,31 @@ img {
   height: 24px;
 }
 
-strong,
-b .strong {
+.w-25 {
+  width: 25%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+strong, b .strong {
   font-weight: bold;
 }
 
-del,
-s .del {
+del, s .del {
   text-decoration-line: line-through;
 }
 
-u,
-.text-underline {
+ins, u, .text-underline {
   text-decoration-line: underline;
   text-underline-offset: 4px;
 }
@@ -160,40 +210,4 @@ u,
 
 .fw-900 {
   font-weight: 900;
-}
-
-@media screen and (max-width: 1400px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .container {
-    max-width: 100%;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  .container-fluid {
-    padding: 0 20px;
-  }
 }

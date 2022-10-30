@@ -28,6 +28,7 @@ h1, .h1 {
 h2, .h2 {
 
   @include max-screen(767) {
+
   }
 }
 
@@ -76,10 +77,6 @@ p {
     @include max-screen(767) {
     }
   }
-
-  small, .small {
-
-  }
 }
 
 strong, b .strong {
@@ -90,12 +87,16 @@ del, s .del {
   text-decoration-line: line-through;
 }
 
-u, .text-underline {
+ins, u, .text-underline {
   @include underline-text(4px);
 }
 
 .caps {
   text-transform: uppercase;
+}
+
+small, .small {
+
 }
 
 .fw-100 {
