@@ -60,7 +60,7 @@ const path = {
     },
 
     server: {
-        baseDir: [`${pathDist}/pages`, pathDist],
+        baseDir: `./dist`,
     },
 
 }
