@@ -1,0 +1,35 @@
+<section class="modal-section">
+    <h3 class="title">Modal window</h3>
+    <hr>
+    <p class="code">
+        &ltbutton class="my-modal btn" type="button"&gtOpen popup&lt/button&gt<br><br>
+
+        &ltdiv class="modal" id="my-modal"&gt<br>
+        &nbsp; &ltdiv class="modal__content"&gt<br>
+        &nbsp;&nbsp; &ltbutton class="modal__btn-close" type="button"&gtX&lt/button&gt<br>
+
+        &nbsp;&nbsp;&nbsp;&ltp&gtLorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consectetur expedita
+        inventore iste nobis<br>
+        &nbsp;&nbsp;&nbsp; nostrum. Aliquam architecto assumenda beatae culpa ducimus id ipsum molestiae, nisi optio
+        perspiciatis<br>
+        &nbsp;&nbsp;&nbsp; quaerat quo, voluptatibus?&lt/p&gt<br>
+        &nbsp;&nbsp;&lt/div&gt<br>
+        &lt/div&gt<br><br>
+
+        &ltscript&gt<br>
+        &nbsp;&nbsp; modal(".my-modal", ".modal__btn-close", "#my-modal", [timer]);<br>
+        &lt/script&gt
+    </p>
+
+    <button class="my-modal btn" type="button">Open popup</button>
+
+    <div class="modal" id="my-modal">
+        <div class="modal__content">
+            <button class="modal__btn-close" type="button">X</button>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consectetur expedita inventore iste nobis
+                nostrum. Aliquam architecto assumenda beatae culpa ducimus id ipsum molestiae, nisi optio perspiciatis
+                quaerat quo, voluptatibus?</p>
+        </div>
+    </div>
+</section>
