@@ -2,10 +2,14 @@ const modal = (trigger,
                close,
                modal,
                timerModal = null) => {
+
     const triggerModal = document.querySelectorAll(trigger),
         closeModal = document.querySelector(`${modal} ${close}`),
         windowModal = document.querySelector(modal),
         body = document.querySelector("body");
+
+    let showModalByTime = (timerModal) ? setTimeout(showModal, timerModal) : null;
+
 
     function showModal() {
         if (!windowModal.classList.contains("show")) {
@@ -39,7 +43,6 @@ const modal = (trigger,
         }
     });
 
-    let showModalByTime = (timerModal) ? setTimeout(showModal, timerModal) : null;
 }
 
 export default modal;

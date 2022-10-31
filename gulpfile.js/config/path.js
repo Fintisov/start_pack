@@ -1,11 +1,17 @@
 const pathSrc = "./_src";
 const pathDist = "./dist"
 
+const isProd = process.argv.includes("--production");
+const isDev = !isProd;
+
+
 const path = {
     root: pathDist,
+    isProd: isProd,
+    isDev: isDev,
 
     html: {
-        src: [`${pathSrc}/pages/*.html`],
+        src: isDev ? [`${pathSrc}/pages/*.html`] : [`${pathSrc}/pages/*.html`, `!${pathSrc}/pages/_settings-page.html`],
         watch: `${pathSrc}/pages/**/*.html`,
         dist: `${pathDist}`
     },

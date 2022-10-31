@@ -138,8 +138,10 @@
     <h3 class="title">Modal window</h3>
     <hr>
     <p class="code">
+        &lt!-- Button trigger modal --&gt<br>
         &ltbutton class="my-modal btn" type="button"&gtOpen popup&lt/button&gt<br><br>
 
+        &lt!-- Modal  --&gt<br>
         &ltdiv class="modal" id="my-modal"&gt<br>
         &nbsp; &ltdiv class="modal__content"&gt<br>
         &nbsp;&nbsp; &ltbutton class="modal__btn-close" type="button"&gtX&lt/button&gt<br>
@@ -152,6 +154,7 @@
         &nbsp;&nbsp;&lt/div&gt<br>
         &lt/div&gt<br><br>
 
+        &lt!-- Initialize Modal  --&gt<br>
         &ltscript&gt<br>
         &nbsp;&nbsp; modal(".my-modal", ".modal__btn-close", "#my-modal", [timer]);<br>
         &lt/script&gt
