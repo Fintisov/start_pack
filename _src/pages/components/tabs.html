@@ -1,38 +1,44 @@
-<section class="modal-section">
-    <h3 class="title">Modal window</h3>
+<section class="tabs-section">
+    <!--region code-->
+
+    <h3 class="title">Tabs</h3>
     <hr>
     <p class="code">
-        &lt!-- Button trigger modal --&gt<br>
-        &ltbutton class="my-modal btn" type="button"&gtOpen popup&lt/button&gt<br><br>
+        &lt!-- Buttons tabs --&gt<br>
+    &ltdiv class="tabs-header"&gt<br>
+        &nbsp;&ltbutton class="btn btn-tabs" type="button"&gtbtn-1&lt/button&gt<br>
+        &nbsp;&ltbutton class="btn btn-tabs" type="button"&gtbtn-2&lt/button&gt<br>
+        &nbsp;&ltbutton class="btn btn-tabs" type="button"&gtbtn-3&lt/button&gt<br>
+        &nbsp;&ltbutton class="btn btn-tabs" type="button"&gtbtn-4&lt/button&gt<br>
+    &lt/div&gt<br><br>
 
-        &lt!-- Modal  --&gt<br>
-        &ltdiv class="modal" id="my-modal"&gt<br>
-        &nbsp; &ltdiv class="modal__content"&gt<br>
-        &nbsp;&nbsp; &ltbutton class="modal__btn-close" type="button"&gtX&lt/button&gt<br>
+    &lt!-- Content tabs --&gt<br>
+    &ltdiv class="tabs-content-wrapper"&gt<br>
+        &nbsp;&ltdiv class="tabs-content"&gtcontent-1&lt/div&gt<br>
+        &nbsp;&ltdiv class="tabs-content"&gtcontent-2&lt/div&gt<br>
+        &nbsp;&ltdiv class="tabs-content"&gtcontent-3&lt/div&gt<br>
+        &nbsp;&ltdiv class="tabs-content"&gtcontent-4&lt/div&gt<br>
+    &lt/div&gt<br><br>
 
-        &nbsp;&nbsp;&nbsp;&ltp&gtLorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consectetur expedita
-        inventore iste nobis<br>
-        &nbsp;&nbsp;&nbsp; nostrum. Aliquam architecto assumenda beatae culpa ducimus id ipsum molestiae, nisi optio
-        perspiciatis<br>
-        &nbsp;&nbsp;&nbsp; quaerat quo, voluptatibus?&lt/p&gt<br>
-        &nbsp;&nbsp;&lt/div&gt<br>
-        &lt/div&gt<br><br>
-
-        &lt!-- Initialize Modal  --&gt<br>
-        &ltscript&gt<br>
-        &nbsp;&nbsp; modal(".my-modal", ".modal__btn-close", "#my-modal", [timer]);<br>
-        &lt/script&gt
+    &ltscript&gt<br>
+    &nbsp;&nbsp; tabs(".tabs-header", ".btn-tabs", ".tabs-content", "active");<br>
+    &lt/script&gt
     </p>
 
-    <button class="my-modal btn" type="button">Open popup</button>
+    <!--endregion-->
 
-    <div class="modal" id="my-modal">
-        <div class="modal__content">
-            <button class="modal__btn-close" type="button">X</button>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consectetur expedita inventore iste nobis
-                nostrum. Aliquam architecto assumenda beatae culpa ducimus id ipsum molestiae, nisi optio perspiciatis
-                quaerat quo, voluptatibus?</p>
-        </div>
+    <div class="tabs-header">
+        <button class="btn btn-tabs" type="button">btn-1</button>
+        <button class="btn btn-tabs" type="button">btn-2</button>
+        <button class="btn btn-tabs" type="button">btn-3</button>
+        <button class="btn btn-tabs" type="button">btn-4</button>
     </div>
+
+    <div class="tabs-content-wrapper">
+        <div class="tabs-content">content-1</div>
+        <div class="tabs-content">content-2</div>
+        <div class="tabs-content">content-3</div>
+        <div class="tabs-content">content-4</div>
+    </div>
+
 </section>
