@@ -20,13 +20,23 @@ eval("__webpack_require__.r(__webpack_exports__);\nconst modal = function (trigg
 
 /***/ }),
 
+/***/ "./_src/scripts/module/tabs.js":
+/*!*************************************!*\
+  !*** ./_src/scripts/module/tabs.js ***!
+  \*************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("__webpack_require__.r(__webpack_exports__);\nconst tabs = (headerSelector, tabsSelector, contentSelector, activeClass) => {\n  const header = document.querySelector(headerSelector);\n  const tabs = document.querySelectorAll(tabsSelector);\n  const contentTabs = document.querySelectorAll(contentSelector);\n  hiddenTabs();\n  showTabs();\n\n  function showTabs() {\n    let i = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;\n    contentTabs[i].classList.remove(\"hidden\");\n    contentTabs[i].classList.add(\"show\");\n    tabs[i].classList.add(activeClass);\n  }\n\n  function hiddenTabs() {\n    contentTabs.forEach(el => {\n      el.classList.add(\"hidden\");\n      el.classList.remove(\"show\");\n    });\n  }\n\n  header.addEventListener(\"click\", e => {\n    if (e.target && e.target.closest(tabsSelector)) {\n      tabs.forEach((elem, i) => {\n        elem.classList.remove(activeClass);\n\n        if (e.target.closest(tabsSelector) === elem) {\n          hiddenTabs();\n          showTabs(i);\n        }\n      });\n    }\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (tabs);\n\n//# sourceURL=webpack://start-pack-project/./_src/scripts/module/tabs.js?");
+
+/***/ }),
+
 /***/ "./_src/scripts/script.js":
 /*!********************************!*\
   !*** ./_src/scripts/script.js ***!
   \********************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _module_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./module/modal */ \"./_src/scripts/module/modal.js\");\n\nwindow.addEventListener(\"DOMContentLoaded\", () => {\n  (0,_module_modal__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(\".my-modal\", \".modal__btn-close\", \"#my-modal\");\n});\n\n//# sourceURL=webpack://start-pack-project/./_src/scripts/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _module_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./module/modal */ \"./_src/scripts/module/modal.js\");\n/* harmony import */ var _module_tabs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./module/tabs */ \"./_src/scripts/module/tabs.js\");\n\n\nwindow.addEventListener(\"DOMContentLoaded\", () => {\n  (0,_module_modal__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(\".my-modal\", \".modal__btn-close\", \"#my-modal\");\n  (0,_module_tabs__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(\".tabs-header\", \".btn-tabs\", \".tabs-content\", \"active\");\n});\n\n//# sourceURL=webpack://start-pack-project/./_src/scripts/script.js?");
 
 /***/ })
 
