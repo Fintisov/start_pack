@@ -1,5 +1,41 @@
-// Шрифты
+// ------------------------------------------------
+// ------------ COLOR ------------
+$black: #000000;
+$light-black: #413E3E;
+$deep-gray: #8F8F8F;
+$mid-gray: #BEBEBE;
+$gray: #E8E8E8;
+$light-gray: #F3F4F6;
+$white: #ffffff;
+$hover-green: #34AE44;
+$green: #44C355;
+$light-green: #DCFDD7;
+$hover-red: #C20000;
+$red: #E31C1C;
+$light-red: #FBD6D4;
+$orange: #FF8A00;
+$yellow-text: #DFAD17;
+$yellow-action: #FFBF00;
+$yellow-alert: #FFE607;
+$light-yellow: #FDF5D7;
+$yellow-oil: #FFC634;
+$orange-edibles: #FF813A;
+$light-blue-delta-8: #1DD1F8;
+$pink-creams: #FF50AB;
+$green-pets: #57DB55;
+$purple-drinks: #A31BE2;
+$blue-capsules: #1651EB;
+
+// ------------------------------------------------
+// ------------ FONTS ------------
+$walsheim: "GT Walsheim Pro", sans-serif;
 
 
-// Цвета
-
+// ------------------------------------------------
+// ------------ Z-Index ------------
+$index-1: 1; // Для наползающих элементов в блоке
+$index-2: 2; // Для наползающих элементов в блоке
+$index-3: 3; // Для затемняющих или блюр масок
+$index-4: 4; // Для сайдбаров
+$index-5: 5; // Для модальных окон
+$index-6: 6; // Для элементов перекрывающих все
