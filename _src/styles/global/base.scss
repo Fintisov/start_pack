@@ -42,7 +42,9 @@ a {
   font-family: inherit;
 
   &:hover {
-    color: inherit;
+    @media #{$ui-mouse-device} {
+      color: inherit;
+    }
   }
 }
 
@@ -81,7 +83,7 @@ h6 {
 h1, .h1 {
   //font-size: 42px;
 
-  @include max-screen(767) {
+  @media screen and (max-width: $ui-breakpoints-md) {
   }
 
   &.lg {
@@ -93,32 +95,32 @@ h1, .h1 {
 
 h2, .h2 {
 
-  @include max-screen(767) {
+  @media screen and (max-width: $ui-breakpoints-md) {
 
   }
 }
 
 h3, .h3 {
 
-  @include max-screen(767) {
+  @media screen and (max-width: $ui-breakpoints-md) {
   }
 }
 
 h4, .h4 {
 
-  @include max-screen(767) {
+  @media screen and (max-width: $ui-breakpoints-md) {
   }
 }
 
 h5, .h5 {
 
-  @include max-screen(767) {
+  @media screen and (max-width: $ui-breakpoints-md) {
   }
 }
 
 h6, .h6 {
 
-  @include max-screen(767) {
+  @media screen and (max-width: $ui-breakpoints-md) {
   }
 }
 
@@ -235,23 +237,23 @@ small, .small {
   margin: 0 auto;
   padding: 0 10px;
 
-  @include max-screen(1400px) {
+  @include max-screen($ui-breakpoints-xxl) {
     max-width: 1140px;
   }
 
-  @include max-screen(1200px) {
+  @include max-screen($ui-breakpoints-xl) {
     max-width: 960px;
   }
 
-  @include max-screen(992px) {
+  @include max-screen($ui-breakpoints-lg) {
     max-width: 720px;
   }
 
-  @include max-screen(768px) {
+  @include max-screen($ui-breakpoints-md) {
     max-width: 540px;
   }
 
-  @include max-screen(576px) {
+  @include max-screen($ui-breakpoints-sm) {
     max-width: 100%;
   }
 }
@@ -261,7 +263,7 @@ small, .small {
   margin: 0 auto;
   padding: 0 10px;
 
-  @include max-screen(575px) {
+  @include max-screen($ui-breakpoints-sm) {
     padding: 0 20px;
   }
 }

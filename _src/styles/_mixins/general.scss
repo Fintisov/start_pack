@@ -1,5 +1,17 @@
+// Скрыть элемента
+@mixin visibility-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
 // Кастомный скролбар
-@mixin style-scrollbar($width: 10px, $height: 6px) {
+@mixin ui-scrollbar($width: 10px, $height: 6px) {
   scrollbar-color: #39c039 transparent;
   scrollbar-width: thin;
 
@@ -31,14 +43,7 @@
   }
 }
 
-// Скрыть элемента
-@mixin visibility-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  margin: -1px;
-  padding: 0;
-  border: 0;
+// ui-style
+@mixin ui-border {
+  border: 1px solid #000000;
 }
