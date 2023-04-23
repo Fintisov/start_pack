@@ -11,8 +11,8 @@ const path = {
     isDev: isDev,
 
     html: {
-        src: isDev ? [`${pathSrc}/pages/*.html`] : [`${pathSrc}/pages/*.html`, `!${pathSrc}/pages/_settings-page.html`],
         watch: `${pathSrc}/pages/**/*.html`,
+        src: isDev ? [`${pathSrc}/pages/*.html`] : [`${pathSrc}/pages/*.html`, `!${pathSrc}/pages/_style-guide.html`],
         dist: `${pathDist}`
     },
 

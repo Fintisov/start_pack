@@ -8,19 +8,19 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Выставляем основные настройки по-умолчанию для body */
 body {
-  min-height: calc(100vh + 1px);
-  scroll-behavior: smooth;
   line-height: 1.25;
 }
 
 ul, ol {
   margin: 0;
-}
-ul.list-unstyled, ol.list-unstyled {
-  list-style: none;
   padding: 0;
+  list-style: none;
 }
 
 input,
@@ -59,18 +59,85 @@ table {
 img {
   width: 100%;
   display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.settings-project-page section {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+strong, b .strong {
+  font-weight: 700;
+}
+
+del, s .del {
+  text-decoration-line: line-through;
+}
+
+ins, u, .text-underline {
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.fw-100 {
+  font-weight: 100;
+}
+
+.fw-200 {
+  font-weight: 200;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+
+.style-guide-page section {
   padding: 20px 0;
 }
-.settings-project-page .title {
+.style-guide-page .title {
   font-size: 32px;
 }
-.settings-project-page hr {
+.style-guide-page hr {
   margin: 15px 0;
 }
-.settings-project-page .code {
+.style-guide-page .code {
   font-family: "Lucida Console", sans-serif;
   font-size: 12px;
   padding: 15px;
@@ -163,14 +230,6 @@ img {
   width: 100%;
 }
 
-.hidden {
-  visibility: hidden;
-}
-
-.show {
-  visibility: inherit !important;
-}
-
 .modal {
   visibility: hidden;
   position: fixed;
@@ -201,69 +260,4 @@ img {
   position: absolute;
   top: 5px;
   right: 10px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-strong, b .strong {
-  font-weight: bold;
-}
-
-del, s .del {
-  text-decoration-line: line-through;
-}
-
-ins, u, .text-underline {
-  text-decoration-line: underline;
-  text-underline-offset: 4px;
-}
-
-.caps {
-  text-transform: uppercase;
-}
-
-.fw-100 {
-  font-weight: 100;
-}
-
-.fw-200 {
-  font-weight: 200;
-}
-
-.fw-300 {
-  font-weight: 300;
-}
-
-.fw-400 {
-  font-weight: 400;
-}
-
-.fw-500 {
-  font-weight: 500;
-}
-
-.fw-600 {
-  font-weight: 600;
-}
-
-.fw-700 {
-  font-weight: 700;
-}
-
-.fw-800 {
-  font-weight: 800;
-}
-
-.fw-900 {
-  font-weight: 900;
 }
