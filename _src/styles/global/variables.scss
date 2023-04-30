@@ -21,11 +21,12 @@ $ui-index-6: 6; // Для элементов перекрывающих все
 
 // ------------------------------------------------
 // ------------ Breakpoints ------------
-$ui-breakpoints-sm: "576px";
-$ui-breakpoints-md: "768px";
-$ui-breakpoints-lg: "992px";
-$ui-breakpoints-xl: "1200px";
 $ui-breakpoints-xxl: "1400px";
+$ui-breakpoints-xl: "1200px";
+$ui-breakpoints-lg: "992px";
+$ui-breakpoints-md: "768px";
+$ui-breakpoints-sm: "576px";
+
 
 // use this: @media #{$ui-mouse-device} {}
 $ui-mouse-device: "(hover: hover) and (pointer: fine)"; // Работает только при наведении мышки

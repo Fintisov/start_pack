@@ -42,9 +42,9 @@ a {
   font-family: inherit;
 
   &:hover {
-    @media #{$ui-mouse-device} {
-      color: inherit;
-    }
+      @include mouse-device {
+        color: inherit;
+      }
   }
 }
 
@@ -73,10 +73,6 @@ h3,
 h4,
 h5,
 h6 {
-  //font-family: $futura;
-  //color: $black;
-  //font-weight: 400;
-  //line-height: 1.25;
   margin: 0;
 }
 
@@ -132,17 +128,17 @@ p {
   //line-height: 1.5;
   margin: 0;
 
-  @include max-screen(767) {
+  @media screen and (max-width: $ui-breakpoints-md) {
   }
 
   &.lg {
 
-    @include max-screen(767) {
+    @media screen and (max-width: $ui-breakpoints-md) {
     }
   }
 
   &.sm {
-    @include max-screen(767) {
+    @media screen and (max-width: $ui-breakpoints-md) {
     }
   }
 }
@@ -204,8 +200,112 @@ small, .small {
 }
 
 //=========================================
-//============ Other =====================
+//============ Containers  ================
 
+.container-fluid {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.container {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  @media screen and (max-width: $ui-breakpoints-xxl) {
+    max-width: 1140px;
+  }
+
+  @media screen and (max-width: $ui-breakpoints-xl) {
+    max-width: 960px;
+  }
+
+  @media screen and (max-width: $ui-breakpoints-lg) {
+    max-width: 720px;
+  }
+
+  @media screen and (max-width: $ui-breakpoints-md) {
+    max-width: 540px;
+  }
+
+  @media screen and (max-width: $ui-breakpoints-sm) {
+    max-width: 100%;
+  }
+}
+
+.container-xxl {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  @media screen and (max-width: $ui-breakpoints-xxl) {
+    max-width: 100%;
+  }
+}
+
+.container-xl {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  @media screen and (max-width: $ui-breakpoints-xxl) {
+    max-width: 1140px;
+  }
+
+  @media screen and (max-width: $ui-breakpoints-xl) {
+    max-width: 100%;
+  }
+}
+
+.container-lg {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  @media screen and (max-width: $ui-breakpoints-xxl) {
+    max-width: 1140px;
+  }
+
+  @media screen and (max-width: $ui-breakpoints-xl) {
+    max-width: 960px;
+  }
+
+  @media screen and (max-width: $ui-breakpoints-lg) {
+    max-width: 100%;
+  }
+}
+
+.container-md {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  @media screen and (max-width: $ui-breakpoints-xxl) {
+    max-width: 1140px;
+  }
+
+  @media screen and (max-width: $ui-breakpoints-xl) {
+    max-width: 960px;
+  }
+
+  @media screen and (max-width: $ui-breakpoints-lg) {
+    max-width: 720px;
+  }
+
+  @media screen and (max-width: $ui-breakpoints-md) {
+    max-width: 100%;
+  }
+}
+
+
+//=========================================
+//============ Other =====================
 .style-guide-page {
   section {
     padding: 20px 0;
@@ -228,43 +328,6 @@ small, .small {
     width: 100%;
     border: 2px solid #31ba31;
     margin-bottom: 15px;
-  }
-}
-
-.container {
-  max-width: 1320px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 10px;
-
-  @include max-screen($ui-breakpoints-xxl) {
-    max-width: 1140px;
-  }
-
-  @include max-screen($ui-breakpoints-xl) {
-    max-width: 960px;
-  }
-
-  @include max-screen($ui-breakpoints-lg) {
-    max-width: 720px;
-  }
-
-  @include max-screen($ui-breakpoints-md) {
-    max-width: 540px;
-  }
-
-  @include max-screen($ui-breakpoints-sm) {
-    max-width: 100%;
-  }
-}
-
-.container-fluid {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 10px;
-
-  @include max-screen($ui-breakpoints-sm) {
-    padding: 0 20px;
   }
 }
 

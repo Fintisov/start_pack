@@ -130,26 +130,10 @@ ins, u, .text-underline {
   font-weight: 900;
 }
 
-.style-guide-page section {
-  padding: 20px 0;
-}
-.style-guide-page .title {
-  font-size: 32px;
-}
-.style-guide-page hr {
-  margin: 15px 0;
-}
-.style-guide-page .code {
-  font-family: "Lucida Console", sans-serif;
-  font-size: 12px;
-  padding: 15px;
-  background-color: rgba(192, 192, 192, 0.5);
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
+.container-fluid {
   width: 100%;
-  border: 2px solid #31ba31;
-  margin-bottom: 15px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .container {
@@ -184,15 +168,104 @@ ins, u, .text-underline {
   }
 }
 
-.container-fluid {
+.container-xxl {
+  max-width: 1320px;
   width: 100%;
   margin: 0 auto;
   padding: 0 10px;
 }
-@media screen and (max-width: 576px) {
-  .container-fluid {
-    padding: 0 20px;
+@media screen and (max-width: 1400px) {
+  .container-xxl {
+    max-width: 100%;
   }
+}
+
+.container-xl {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+@media screen and (max-width: 1400px) {
+  .container-xl {
+    max-width: 1140px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .container-xl {
+    max-width: 100%;
+  }
+}
+
+.container-lg {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+@media screen and (max-width: 1400px) {
+  .container-lg {
+    max-width: 1140px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .container-lg {
+    max-width: 960px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .container-lg {
+    max-width: 100%;
+  }
+}
+
+.container-md {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+@media screen and (max-width: 1400px) {
+  .container-md {
+    max-width: 1140px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .container-md {
+    max-width: 960px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .container-md {
+    max-width: 720px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container-md {
+    max-width: 100%;
+  }
+}
+
+.style-guide-page section {
+  padding: 20px 0;
+}
+.style-guide-page .title {
+  font-size: 32px;
+}
+.style-guide-page hr {
+  margin: 15px 0;
+}
+.style-guide-page .code {
+  font-family: "Lucida Console", sans-serif;
+  font-size: 12px;
+  padding: 15px;
+  background-color: rgba(192, 192, 192, 0.5);
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  width: 100%;
+  border: 2px solid #31ba31;
+  margin-bottom: 15px;
 }
 
 .visibility-hidden {
