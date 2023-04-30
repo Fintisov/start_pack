@@ -10,3 +10,18 @@
     @content;
   }
 }
+
+// Работает только при наведении мышки
+@mixin mouse-device {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+// Работает только на касание сенсорных экранах
+@mixin touch-device {
+  @media (hover: none) and (pointer: coarse) {
+    @content;
+  }
+}
+
