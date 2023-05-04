@@ -1,3 +1,11 @@
+// Настройки контейнера
+@mixin container-setting {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 // Скрыть элемента
 @mixin visibility-hidden {
   position: absolute;

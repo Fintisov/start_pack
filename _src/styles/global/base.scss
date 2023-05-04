@@ -8,7 +8,6 @@
 
 html {
   scroll-behavior: smooth;
-  //font-size: 10px;
 }
 
 /* Выставляем основные настройки по-умолчанию для body */
@@ -67,12 +66,12 @@ img {
 //=========================================
 //============ Typography =================
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
   margin: 0;
 }
 
@@ -209,10 +208,7 @@ small, .small {
 }
 
 .container {
-  max-width: 1320px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 10px;
+  @include container-setting;
 
   @media screen and (max-width: $ui-breakpoints-xxl) {
     max-width: 1140px;
@@ -236,10 +232,7 @@ small, .small {
 }
 
 .container-xxl {
-  max-width: 1320px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 10px;
+  @include container-setting;
 
   @media screen and (max-width: $ui-breakpoints-xxl) {
     max-width: 100%;
@@ -247,10 +240,7 @@ small, .small {
 }
 
 .container-xl {
-  max-width: 1320px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 10px;
+  @include container-setting;
 
   @media screen and (max-width: $ui-breakpoints-xxl) {
     max-width: 1140px;
@@ -262,10 +252,7 @@ small, .small {
 }
 
 .container-lg {
-  max-width: 1320px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 10px;
+  @include container-setting;
 
   @media screen and (max-width: $ui-breakpoints-xxl) {
     max-width: 1140px;
@@ -281,10 +268,7 @@ small, .small {
 }
 
 .container-md {
-  max-width: 1320px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 10px;
+  @include container-setting;
 
   @media screen and (max-width: $ui-breakpoints-xxl) {
     max-width: 1140px;
