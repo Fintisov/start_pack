@@ -1,5 +1,3 @@
-@use "sass:math";
-
 // подключение Шрифтов
 @mixin font-face($font-family, $url, $font-weight: 400, $font-style: "normal") {
   @font-face {
@@ -13,10 +11,30 @@
   }
 }
 
+// Адаптивный шрифт
+@mixin adaptiv-font($desk-size, $mod-size, $line-height: $desk-size) {
+  /*
+  $desk-size - Шрифт для десктопа
+  $mod-size - Шрифт для устройства 320px
+  */
+
+  $addSize: $desk-size - $mod-size;
+  $addMobSize: $addSize + $addSize * 0.7;
+
+  @media screen and (max-width: $ui-breakpoints-md) {
+    font-size: calc(#{$mod-size + px} + #{$addMobSize} * ((100vw - 320px) / 1920));
+  }
+  @media screen and (min-width: $ui-breakpoints-md) {
+    font-size: calc(#{$mod-size + px} + #{$addSize} * (100vw / 1920));
+  }
+
+  line-height: calc($line-height / $desk-size);
+}
+
 // вычисление lh и задавание fz
-@mixin font($font-size, $line-height) {
-  font-size: $font-size;
-  line-height: math.div($line-height, $font-size);
+@mixin font($font-size, $line-height: $font-size) {
+  font-size: #{$font-size}px;
+  line-height: calc($line-height / $font-size);
 }
 
 // Отображение количества строк
