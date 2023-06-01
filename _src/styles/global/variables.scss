@@ -31,3 +31,7 @@ $ui-breakpoints-sm: "576px";
 // use this: @media #{$ui-mouse-device} {}
 $ui-mouse-device: "(hover: hover) and (pointer: fine)"; // Работает только при наведении мышки
 $ui-touch-device: "(hover: none) and (pointer: coarse)"; // Работает только на сенсорных экранах
+
+// ------------------------------------------------
+// ------------ parameters styles ------------
+$ui-transition-default: 0.2s;

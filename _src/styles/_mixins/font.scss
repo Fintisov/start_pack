@@ -12,7 +12,7 @@
 }
 
 // Адаптивный шрифт
-@mixin adaptiv-font($desk-size, $mod-size, $line-height: $desk-size) {
+@mixin font-adaptiv($desk-size, $mod-size, $line-height: $desk-size) {
   /*
   $desk-size - Шрифт для десктопа
   $mod-size - Шрифт для устройства 320px
@@ -22,7 +22,7 @@
   $addMobSize: $addSize + $addSize * 0.7;
 
   @media screen and (max-width: $ui-breakpoints-md) {
-    font-size: calc(#{$mod-size + px} + #{$addMobSize} * ((100vw - 320px) / 1920));
+    font-size: calc(#{$mod-size + px} + #{$addMobSize} * ((100vw - 375px) / 1920));
   }
   @media screen and (min-width: $ui-breakpoints-md) {
     font-size: calc(#{$mod-size + px} + #{$addSize} * (100vw / 1920));
@@ -52,3 +52,4 @@
   text-decoration-line: underline;
   text-underline-offset: $under;
 }
+
