@@ -21,11 +21,17 @@ $ui-index-6: 6; // Для элементов перекрывающих все
 
 // ------------------------------------------------
 // ------------ Breakpoints ------------
-$ui-breakpoints-xxl: "1400px";
-$ui-breakpoints-xl: "1200px";
+$ui-breakpoints-xl: "1300px";
+$ui-breakpoints-xl--min: "1301px";
+
 $ui-breakpoints-lg: "992px";
+$ui-breakpoints-lg--min: "993px";
+
 $ui-breakpoints-md: "768px";
+$ui-breakpoints-md--min: "769px";
+
 $ui-breakpoints-sm: "576px";
+$ui-breakpoints-sm--min: "577px";
 
 
 // use this: @media #{$ui-mouse-device} {}
