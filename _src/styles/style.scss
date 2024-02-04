@@ -1,4 +1,7 @@
 @use "sass:math";
+//******************** IMPORT ********************
+//@import "../../node_modules/animate.css/animate";
+
 //******************** MIXINS ********************
 @import "_mixins/font";
 @import "_mixins/media";
@@ -6,8 +9,8 @@
 @import "_mixins/general";
 
 //******************** GLOBAL ********************
-@import "global/variables";
 @import "global/fonts";
+@import "global/variables";
 
 //******************** OTHER ********************
 @import "global/base";

@@ -76,70 +76,31 @@ h6, .h6 {
 }
 
 h1, .h1 {
-  //font-size: 42px;
 
-  @media screen and (max-width: $ui-breakpoints-md) {
-  }
-
-  &.lg {
-  }
-
-  &.sm {
-  }
 }
 
 h2, .h2 {
 
-  @media screen and (max-width: $ui-breakpoints-md) {
-
-  }
 }
 
 h3, .h3 {
 
-  @media screen and (max-width: $ui-breakpoints-md) {
-  }
 }
 
 h4, .h4 {
 
-  @media screen and (max-width: $ui-breakpoints-md) {
-  }
 }
 
 h5, .h5 {
 
-  @media screen and (max-width: $ui-breakpoints-md) {
-  }
 }
 
 h6, .h6 {
 
-  @media screen and (max-width: $ui-breakpoints-md) {
-  }
 }
 
 p {
-  //font-family: $futura;
-  //color: $black;
-  //font-size: 18px;
-  //font-weight: 400;
-  //line-height: 1.5;
-  margin: 0;
 
-  @media screen and (max-width: $ui-breakpoints-md) {
-  }
-
-  &.lg {
-
-    @media screen and (max-width: $ui-breakpoints-md) {
-    }
-  }
-
-  &.sm {
-    @media screen and (max-width: $ui-breakpoints-md) {
-    }
-  }
 }
 
 strong, b .strong {

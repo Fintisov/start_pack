@@ -74,9 +74,6 @@ h6, .h6 {
   margin: 0;
 }
 
-p {
-  margin: 0;
-}
 strong, b .strong {
   font-weight: 700;
 }
@@ -147,7 +144,7 @@ ins, u, .text-underline {
     max-width: 1140px;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
   .container {
     max-width: 960px;
   }
@@ -191,7 +188,7 @@ ins, u, .text-underline {
     max-width: 1140px;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
   .container-xl {
     max-width: 100%;
   }
@@ -208,7 +205,7 @@ ins, u, .text-underline {
     max-width: 1140px;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
   .container-lg {
     max-width: 960px;
   }
@@ -230,7 +227,7 @@ ins, u, .text-underline {
     max-width: 1140px;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
   .container-md {
     max-width: 960px;
   }
